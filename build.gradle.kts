@@ -18,6 +18,12 @@ allprojects {
 }
 
 subprojects {
+    apply(plugin = "kotlin")
+    apply(plugin = "kotlin-kapt")
+    apply(plugin = "org.jetbrains.kotlin.plugin.spring")
+    apply(plugin = "org.springframework.boot")
+    apply(plugin = "io.spring.dependency-management")
+
     dependencies {
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
