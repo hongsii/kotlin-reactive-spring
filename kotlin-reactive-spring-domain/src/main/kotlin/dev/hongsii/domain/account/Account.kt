@@ -7,5 +7,10 @@ import javax.persistence.Entity
 @Entity
 data class Account(
         @Column
-        val email: String
-) : BaseEntity()
+        val email: String,
+
+        @Column
+        val name: String
+) : BaseEntity() {
+
+}

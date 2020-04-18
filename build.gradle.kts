@@ -1,15 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-object Versions {
-    const val kotlin = "1.3.71"
-}
-
 plugins {
-    id("org.springframework.boot") version "2.2.6.RELEASE"
-    id("io.spring.dependency-management") version "1.0.9.RELEASE"
-    kotlin("jvm") version Versions.kotlin
-    kotlin("plugin.spring") version Versions.kotlin
-    kotlin("plugin.jpa") version Versions.kotlin
+    kotlin("jvm") version "1.3.71"
+
+    id("org.springframework.boot") version "2.2.6.RELEASE" apply false
+    id("io.spring.dependency-management") version "1.0.9.RELEASE" apply false
+    kotlin("plugin.spring") version "1.3.71" apply false
+    kotlin("plugin.jpa") version "1.3.71" apply false
 }
 
 allprojects {
@@ -23,7 +20,6 @@ allprojects {
 
 subprojects {
     apply(plugin = "kotlin")
-    apply(plugin = "kotlin-kapt")
     apply(plugin = "org.jetbrains.kotlin.plugin.spring")
     apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
