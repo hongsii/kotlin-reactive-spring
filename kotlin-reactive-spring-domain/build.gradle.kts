@@ -10,8 +10,8 @@ apply(plugin = "kotlin-kapt")
 dependencies {
     api("org.springframework.boot:spring-boot-starter-data-jpa")
 
-    api("com.querydsl:querydsl-jpa:4.2.2")
-    kapt("com.querydsl:querydsl-apt:4.2.2:jpa")
+    api("com.querydsl:querydsl-jpa:${Versions.querydsl}")
+    kapt("com.querydsl:querydsl-apt:${Versions.querydsl}:jpa")
 
     runtimeOnly("com.h2database:h2")
 }
