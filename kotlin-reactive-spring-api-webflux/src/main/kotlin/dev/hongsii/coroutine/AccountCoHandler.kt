@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.bodyValueAndAwait
 
 @Component
 class AccountCoHandler(
-        private val accountRepository: AccountRepository
+    private val accountRepository: AccountRepository
 ) {
 
     suspend fun getAccounts(request: ServerRequest): ServerResponse {
@@ -30,4 +30,5 @@ class AccountCoHandler(
     }
 }
 
-suspend fun <T> io(block: suspend CoroutineScope.() -> T): T = withContext(Dispatchers.IO, block)
+suspend inline fun <T> io(crossinline block: suspend CoroutineScope.() -> T): T =
+    withContext(Dispatchers.IO) { block() }
