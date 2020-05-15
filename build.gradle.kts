@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version Versions.kotlin
+    kotlin("jvm") version "1.3.71"
 
-    id("org.springframework.boot") version Versions.springBoot apply false
-    id("io.spring.dependency-management") version Versions.dependencyManagement apply false
-    kotlin("plugin.spring") version Versions.kotlin apply false
-    kotlin("plugin.jpa") version Versions.kotlin apply false
+    id("org.springframework.boot") version "2.2.6.RELEASE" apply false
+    id("io.spring.dependency-management") version "1.0.9.RELEASE" apply false
+    kotlin("plugin.spring") version "1.3.71" apply false
+    kotlin("plugin.jpa") version "1.3.71" apply false
 }
 
 allprojects {
